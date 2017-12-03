@@ -1,0 +1,24 @@
+{% extends 'AppBundle::layout.html.twig'%}
+
+{% block styles %}
+    <style>
+        .requiered{
+            color:red; !important;
+        }
+    </style>
+{% endblock %}
+
+
+
+
+{%  block body %}
+    <form class="form">
+        <div class="form-group">
+        {{ parent() }}
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+        </div>
+    </form>
+
+{% endblock %}

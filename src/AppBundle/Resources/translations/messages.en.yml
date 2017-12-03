@@ -1,0 +1,11 @@
+home:
+  welcome: Welcome
+
+product:
+  orderBy: Order by :
+  price: Price
+  title: Title
+  accessProd: Product access
+  description: Product description
+  submit: save
+

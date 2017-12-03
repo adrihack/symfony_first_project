@@ -1,0 +1,62 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{%  block body %}
+    <p>{{  'product.orderBy'|trans }}</p>
+
+    {{ form_start(form,{'attr':{'novalidate': 'novalidate'}}) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+    <div style="margin: 0 10%;border: 1px groove">
+
+
+        <table class="table table-stripped table-hover">
+
+
+            <tr style="">
+                <th>
+                    <a href="{{ path("show_product_list", { 'colonne':'title', 'order':tri}) }}">
+                        {{  'product.title'|trans }}<span class = glyphicon glyphicon-triangle-bottom></span>
+                    </a>
+                </th>
+
+                <th>
+                    {{ 'product.description'|trans }}
+                </th>
+
+                <th>
+                    <a href="{{ path("show_product_list", { 'colonne':'price', 'order':tri }) }}">
+                        {{  'product.price'|trans }}<span class = glyphicon glyphicon-triangle-bottom></span>
+                    </a>
+                </th>
+                <th>
+                    {{ 'product.accessProd'|trans }}
+                </th>
+            </tr>
+
+
+
+        {% for product in products %}
+                <tr>
+                    <td>
+                        <h1> {{ product.title }}</h1>
+                    </td>
+                    <td>
+                        <p> {{ product.description }}</p>
+                    </td>
+                    <td>
+                        <p> {{ product.price }} €</p>
+                    </td>
+                    <td>
+                        <a href="{{ path('show_product',{'id': product.id}) }}">
+                            <button>afficher le produit</button>
+                        </a>
+                    </td>
+            </tr>
+
+        {% endfor %}
+        </table>
+    </div>
+
+
+
+{% endblock %}

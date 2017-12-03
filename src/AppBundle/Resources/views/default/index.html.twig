@@ -1,0 +1,10 @@
+{% extends 'AppBundle::layout.html.twig' %}
+{%  block body %}
+<a href="product/list">
+Lien direct produits
+</a>
+
+
+    {{ parent() }}
+<h1>{{  'home.welcome'|trans }}</h1>
+{% endblock %}

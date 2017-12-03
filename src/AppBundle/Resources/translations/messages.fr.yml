@@ -1,0 +1,10 @@
+home:
+  welcome: Bonjour
+
+product:
+  orderBy: Trier par :
+  price: Prix
+  title: Nom
+  accessProd: Accès au produit
+  description: Description du produit
+  submit: sauvegarder

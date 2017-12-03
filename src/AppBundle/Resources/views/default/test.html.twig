@@ -1,0 +1,32 @@
+{%  extends 'AppBundle::layout.html.twig' %}
+
+
+
+{%  block body %}
+    <button id="btn">Click</button>
+    {% if name is not null %}
+        {{ name }}
+    {% endif %}
+
+{%  endblock %}
+
+
+
+{% block javascript %}
+
+        <script>
+            function promptName(){
+                    var name = prompt('Quel est votre nom ?');
+                    if (name) {
+                        document.location = '{{ url }}/' + name;
+                    }
+                }
+            {% if name is null %}
+                    setTimeout(promptName, 100);
+            {% endif %}
+
+            document.querySelector('#btn').addEventListener('click', promptName);
+        </script>
+
+
+{%  endblock %}
