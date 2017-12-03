@@ -12,11 +12,12 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="app_dev.php/">beauxProduits.com</a>
+            <a class="navbar-brand" href="/app_dev.php/">Accueil</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/app_dev.php/">Accueil</a></li>
-            <li><a href="/app_dev.php/product/list">Produits</a></li>
+            <li class="active"><a href="/app_dev.php/">compétances</a></li>
+            <li><a href="/app_dev.php/product/list">Réalisations</a></li>
+            <li><a href="/app_dev.php/product/list">Blog</a></li>
 
             <li><a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale':'en'})) }}">en</a></li>
             <li><a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale':'fr'})) }}">fr</a></li>
