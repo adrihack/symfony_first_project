@@ -15,26 +15,23 @@
             <tr style="">
                 <th>
                     <a href="{{ path("show_product_list", { 'colonne':'title', 'order':tri}) }}">
-                        {{  'product.title'|trans }}<span class = glyphicon glyphicon-triangle-bottom></span>
+                        {{  'blog_post.title'|trans }}<span class = glyphicon glyphicon-triangle-bottom></span>
                     </a>
                 </th>
 
                 <th>
-                    {{ 'product.description'|trans }}
+                    {{ 'blog_postbody'|trans }}
                 </th>
 
                 <th>
                     <a href="{{ path("show_product_list", { 'colonne':'price', 'order':tri }) }}">
-                        {{  'product.price'|trans }}<span class = glyphicon glyphicon-triangle-bottom></span>
+                        {{  'user.username'|trans }}<span class = glyphicon glyphicon-triangle-bottom></span>
                     </a>
-                </th>
-                <th>
-                    {{ 'product.accessProd'|trans }}
                 </th>
             </tr>
 
 
-
+{#
         {% for product in products %}
                 <tr>
                     <td>
@@ -53,7 +50,7 @@
                     </td>
             </tr>
 
-        {% endfor %}
+        {% endfor %}#}
         </table>
     </div>
 
